@@ -20,7 +20,7 @@ public class Utils {
         return output.toString();
     }
 
-    public static ArrayList<ElectionResult> parse2016ElelectionResults(String data) {
+    public static ArrayList<ElectionResult> parse2016ElectionResults(String data) {
         ArrayList<ElectionResult> results = new ArrayList<>();
         String[] initial = data.split(", ");
         ArrayList<String> vals = removeExtraPunctuation(initial);
