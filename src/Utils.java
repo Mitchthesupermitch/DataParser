@@ -41,4 +41,23 @@ public class Utils {
         return  results;
     }
 
+    private ArrayList<String> removeExtraPunctuation(String[] initial) {
+        ArrayList<String> output = new ArrayList<>();
+        for(String value:initial){
+            if(value.contains(",")) value = value.replace(",", "");
+            if(value.contains("\"")) value = value.replace("\"", "");
+            if(value.contains("%")) value = value.replace("%", "");
+            //other punctuation for generalization
+            if(value.contains("!")) value = value.replace("!", "");
+            if(value.contains("#")) value = value.replace("#", "");
+            if(value.contains("^")) value = value.replace("^", "");
+            if(value.contains("$")) value = value.replace("$", "");
+            if(value.contains("*")) value = value.replace("*", "");
+
+            value = value.trim();
+
+            output.add(value);
+        }
+        return output;
+    }
 }
