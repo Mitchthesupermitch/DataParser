@@ -4,7 +4,14 @@ public class County {
     private Election016 vote016;
     private Education016 educ016;
     private Employment016 employ016;
+    public County(String name, int fips, Election016 vote016, Education016 educ016, Employment016 employ016) {
 
+        this.name = name;
+        this.fips = fips;
+        this.vote016 = vote016;
+        this.educ016 = educ016;
+        this.employ016 = employ016;
+    }
     public String getName() {
         return name;
     }
@@ -45,12 +52,5 @@ public class County {
         this.employ016 = employ016;
     }
 
-    public County(String name, int fips, Election016 vote016, Education016 educ016, Employment016 employ016) {
 
-        this.name = name;
-        this.fips = fips;
-        this.vote016 = vote016;
-        this.educ016 = educ016;
-        this.employ016 = employ016;
-    }
 }
